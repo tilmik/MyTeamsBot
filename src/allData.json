@@ -1,122 +1,142 @@
 [
     {
+        "type": "bug",
         "tracking_number": 1056783,
         "title": "App Crashes on Launch After Recent Update",
         "priority": 3,
         "severity": 3
     },
     {
+        "type": "bug",
         "tracking_number": 1896543,
         "title": "UI Elements Overlapping on Smaller Screen Devices",
         "priority": 2,
         "severity": 2
     },
     {
+        "type": "bug",
         "tracking_number": 1748392,
         "title": "Push Notifications Not Appearing on iOS Devices",
         "priority": 3,
         "severity": 2
     },
     {
+        "type": "bug",
         "tracking_number": 1582739,
         "title": "Android App Freezes When Navigating to Settings Page",
-        "priority": 3,
+        "priority": 2,
         "severity": 3
     },
     {
+        "type": "bug",
         "tracking_number": 1432768,
         "title": "Text Input Field Unresponsive on Certain Android Models",
-        "priority": 2,
-        "severity": 3
-    },
-    {
-        "tracking_number": 1948276,
-        "title": "Screen Flicker Issue When Scrolling Through Images",
-        "priority": 2,
+        "priority": 1,
         "severity": 2
     },
     {
+        "type": "bug",
+        "tracking_number": 1948276,
+        "title": "Screen Flicker Issue When Scrolling Through Images",
+        "priority": 2,
+        "severity": 1
+    },
+    {
+        "type": "bug",
         "tracking_number": 1786432,
         "title": "GPS Functionality Fails to Update Location on iPhone 12",
         "priority": 2,
         "severity": 3
     },
     {
+        "type": "bug",
         "tracking_number": 1309875,
         "title": "App Fails to Load After Switching Between Wi-Fi and Mobile Data",
-        "priority": 3,
-        "severity": 3
+        "priority": 1,
+        "severity": 1
     },
     {
+        "type": "bug",
         "tracking_number": 1642538,
         "title": "In-App Purchases Not Reflecting in User Account",
         "priority": 3,
         "severity": 3
     },
     {
+        "type": "bug",
         "tracking_number": 1523649,
         "title": "Background Music Continues to Play After App is Closed",
-        "priority": 2,
+        "priority": 1,
         "severity": 2
     },
     {
+        "type": "bug",
         "tracking_number": 1987432,
         "title": "Crash Occurs When Selecting Multiple Photos for Upload",
         "priority": 2,
-        "severity": 3
+        "severity": 1
     },
     {
+        "type": "bug",
         "tracking_number": 1839274,
         "title": "Missing Icons on Home Screen After App Update",
         "priority": 1,
         "severity": 2
     },
     {
+        "type": "bug",
         "tracking_number": 1674893,
         "title": "Device Overheats When Using Augmented Reality Features",
         "priority": 2,
         "severity": 3
     },
     {
+        "type": "bug",
         "tracking_number": 1112345,
         "title": "Incorrect Date and Time Displayed in Notifications",
         "priority": 1,
         "severity": 2
     },
     {
+        "type": "bug",
         "tracking_number": 1456789,
         "title": "Bluetooth Connectivity Issues with Headphones During Calls",
         "priority": 2,
         "severity": 2
     },
     {
+        "type": "bug",
         "tracking_number": 1998745,
         "title": "App Stalls on Startup When Connected to VPN",
         "priority": 2,
         "severity": 3
     },
     {
+        "type": "bug",
         "tracking_number": 1623548,
         "title": "Landscape Mode Not Supported in Latest Version",
-        "priority": 1,
+        "priority": 3,
         "severity": 2
     },
     {
+        "type": "bug",
         "tracking_number": 1387456,
         "title": "Text Message Notifications Delay on Android 13",
         "priority": 2,
         "severity": 2
     },
     {
+        "type": "bug",
         "tracking_number": 1463829,
         "title": "Battery Drain Increased After Recent Update",
         "priority": 2,
         "severity": 3
     },
     {
+        "type": "bug",
         "tracking_number": 1538927,
         "title": "Inconsistent Font Rendering on Different Screen Resolutions",
-        "priority": 1,
-        "severity": 2
+        "priority": 3,
+        "severity": 3
     }
 ]

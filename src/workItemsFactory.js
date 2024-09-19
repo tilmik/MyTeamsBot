@@ -1,7 +1,7 @@
-const bugData = require("./bugData.json");
 const workItemsCard = require("./adaptiveCards/workItemsOutline.json");
 const actionData = require("./adaptiveCards/workItemsActions.json");
 const { StatusCodes } = require('botbuilder');
+const dataService = require('./dataService');
 const pageSize = 3;
 
 const invokeResponse = (card) => {
@@ -19,51 +19,65 @@ const invokeResponse = (card) => {
 
 const buildCard = (page) => {
     let cardJson = JSON.parse(JSON.stringify(workItemsCard));
-    let cardData = dataSegment(page);
+    let cardData = dataService.getData(page, pageSize);
     let cardDataArray = dataToCardArray(cardData);
     cardJson.body.push(...cardDataArray);
     cardJson.body.push(actionSegment(page));
     return cardJson;
 }
 
-const dataSegment = (page) => {
-    dataLength = bugData.length;
-    startIndex = page * pageSize;
-    if (startIndex < 0 || startIndex >= dataLength) startIndex = 0;
-    let result = [];
-    result.push(bugData[startIndex]);
-    if (startIndex + 1 < dataLength) result.push(bugData[startIndex + 1]);
-    if (startIndex + 2 < dataLength) result.push(bugData[startIndex + 2]);
-    return result;
-};
-
 const dataToCardArray = (data) => {
     let result = [];
     for (var i = 0; i < data.length; i++) {
         let obj = {};
         obj.type = "Container";
-        obj.separator = true;
+        obj.style = "emphasis";
         obj.items = [];
         obj.items.push({
-            type: "RichTextBlock",
-            inlines: [
+            type: "ColumnSet",
+            columns: [
                 {
-                    type: "TextRun",
-                    text: "" + data[i].tracking_number,
-                    color: "accent",
-                    underline: true
+                    type: "Column",
+                    width: "auto",
+                    verticalContentAlignment: "center",
+                    items: [
+                        {
+                            type: "Image",
+                            url: "https://i.imgur.com/X4Xhz8s.png",
+                            height: "16px",
+                        }
+                    ]
+                },
+                {
+                    type: "Column",
+                    width: "stretch",
+                    items: [
+                        {
+                            type: "RichTextBlock",
+                            inlines: [
+                                {
+                                    type: "TextRun",
+                                    text: "" + data[i].tracking_number,
+                                    color: "accent",
+                                    underline: true
+                                }
+                            ]
+                        }
+                    ]
                 }
-            ]
+            ],
         });
         obj.items.push({
             type: "TextBlock",
             text: data[i].title,
+            spacing: "none",
             wrap: false
         });
         obj.items.push({
             type: "TextBlock",
-            text: "Priority: " + data[i].priority + " Severity: " + data[i].severity,
-            size: "small"
+            text: "Priority: " + data[i].priority + " &nbsp;&nbsp;  Severity: " + data[i].severity,
+            size: "small",
+            spacing: "none"
         })
         result.push(obj);
     }
@@ -71,18 +85,19 @@ const dataToCardArray = (data) => {
 };
 
 const actionSegment = (page) => {
-    dataLength = bugData.length;
-    totalPages = Math.floor(dataLength / pageSize);
-    if (dataLength % pageSize != 0) totalPages = totalPages + 1;
+    //dataLength = bugData.length;
+    //totalPages = Math.floor(dataLength / pageSize);
+    //if (dataLength % pageSize != 0) totalPages = totalPages + 1;
+    let totalPages = dataService.getTotalPages(pageSize);
     let result = JSON.parse(JSON.stringify(actionData));
     
     result.columns[0].items[0].actions[0].data.targetPage = page - 1;
     if (page <= 0) result.columns[0].items[0].actions[0].isEnabled = false;
     
-    result.columns[1].items[0].text = "Page " + page + " of " + totalPages;
+    result.columns[1].items[0].text = "Page " + (page+1) + " of " + totalPages;
 
     result.columns[2].items[0].actions[0].data.targetPage = page + 1;
-    if (page >= totalPages) result.columns[2].items[0].actions[0].isEnabled = false;
+    if (page >= totalPages - 1) result.columns[2].items[0].actions[0].isEnabled = false;
 
     return result;
 }
