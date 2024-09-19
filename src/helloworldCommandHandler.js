@@ -13,8 +13,8 @@ class HelloWorldCommandHandler {
 
     // render your adaptive card for reply message
     const cardData = {
-      title: "Your Hello World App is Running",
-      body: "Congratulations! Your Hello World App is running. Open the documentation below to learn more about how to build applications with the Teams Toolkit.",
+      title: "Hello from work item bot!",
+      body: "Congratulations! Your work item bot is running. Use available commands to interact with the bot.",
     };
 
     const cardJson = AdaptiveCards.declare(helloWorldCard).render(cardData);

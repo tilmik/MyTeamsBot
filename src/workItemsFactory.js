@@ -32,6 +32,7 @@ const dataToCardArray = (data) => {
         let obj = {};
         obj.type = "Container";
         obj.style = "emphasis";
+        obj.spacing = "small";
         obj.items = [];
         obj.items.push({
             type: "ColumnSet",
@@ -43,7 +44,7 @@ const dataToCardArray = (data) => {
                     items: [
                         {
                             type: "Image",
-                            url: "https://i.imgur.com/X4Xhz8s.png",
+                            url: dataService.getIconUrl(data[i].type),
                             height: "16px",
                         }
                     ]

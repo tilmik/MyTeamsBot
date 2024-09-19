@@ -43,7 +43,7 @@
                     "commands": [
                         {
                             "title": "helloWorld",
-                            "description": "A helloworld command to send a welcome message"
+                            "description": "Welcome message from the bot"
                         },
                         {
                             "title": "myWorkItems",

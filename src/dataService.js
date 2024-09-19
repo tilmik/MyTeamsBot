@@ -1,4 +1,10 @@
 const allData = require("./allData.json");
+const iconUrls = {
+    bug: "https://i.imgur.com/X4Xhz8s.png",
+    feature: "https://i.imgur.com/f13Oej7.png",
+    task: "https://i.imgur.com/rhCc0o8.png",
+    userstory: "https://i.imgur.com/enMwd2b.png"
+};
 let totalPages = -1;
 let filteredData = allData;
 
@@ -29,8 +35,13 @@ const getData = (page, pageSize) => {
     return filteredData.slice(startIndex, endIndex);
 };
 
+const getIconUrl = (itemType) => {
+    return iconUrls[itemType];
+};
+
 module.exports = {
     applyFilter,
     getTotalPages,
-    getData
+    getData,
+    getIconUrl
 };

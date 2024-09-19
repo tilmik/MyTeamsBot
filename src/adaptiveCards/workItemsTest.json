@@ -10,7 +10,7 @@
       {
         "type": "Container",
         "style": "emphasis",
-        "separator": false,
+        "spacing": "small",
         "items": [
             {
               "type": "ColumnSet",
