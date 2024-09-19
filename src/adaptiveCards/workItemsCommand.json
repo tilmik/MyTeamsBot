@@ -1,0 +1,25 @@
+{
+    "type": "AdaptiveCard",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "Your work items",
+            "weight": "Bolder",
+            "size": "Medium"
+        },
+        {
+            "type": "Image",
+            "url": "https://adaptivecards.io/content/cats/1.png",
+            "size": "Medium"
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.OpenUrl",
+            "title": "Learn More",
+            "url": "https://adaptivecards.io"
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5"
+}

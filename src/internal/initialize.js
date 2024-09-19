@@ -1,6 +1,7 @@
 const { BotBuilderCloudAdapter } = require("@microsoft/teamsfx");
 const ConversationBot = BotBuilderCloudAdapter.ConversationBot;
 const { HelloWorldCommandHandler } = require("../helloworldCommandHandler");
+const { WorkItemsCommandHandler } = require("../workItemsCommandHandler");
 const config = require("./config");
 
 // Create the command bot and register the command handlers for your app.
@@ -16,7 +17,7 @@ const commandApp = new ConversationBot({
   },
   command: {
     enabled: true,
-    commands: [new HelloWorldCommandHandler()],
+    commands: [new HelloWorldCommandHandler(), new WorkItemsCommandHandler()],
   },
 });
 

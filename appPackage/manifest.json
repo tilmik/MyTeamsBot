@@ -44,6 +44,10 @@
                         {
                             "title": "helloWorld",
                             "description": "A helloworld command to send a welcome message"
+                        },
+                        {
+                            "title": "myWorkItems",
+                            "description": "Returns a list of work items assigned to you"
                         }
                     ]
                 }
