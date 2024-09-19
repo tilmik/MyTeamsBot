@@ -1,0 +1,58 @@
+{
+    "type": "ColumnSet",
+    "columns": [
+        {
+            "type": "Column",
+            "width": "auto",
+            "items": [
+                {
+                    "type": "ActionSet",
+                    "actions": [
+                        {
+                            "type": "Action.Execute",
+                            "title": "Previous",
+                            "verb": "pageChange",
+                            "data": {
+                                "targetPage": "${previousPage}"
+                            },
+                            "isEnabled": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Column",
+            "width": "stretch",
+            "verticalContentAlignment": "center",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "Page ${currentPage} of ${totalPage}",
+                    "horizontalAlignment": "center",
+                    "size": "Small"
+                }
+            ]
+        },
+        {
+            "type": "Column",
+            "width": "auto",
+            "items": [
+                {
+                    "type": "ActionSet",
+                    "actions": [
+                        {
+                            "type": "Action.Execute",
+                            "title": "Next",
+                            "verb": "pageChange",
+                            "data": {
+                                "targetPage": "${nextPage}"
+                            },
+                            "isEnabled": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

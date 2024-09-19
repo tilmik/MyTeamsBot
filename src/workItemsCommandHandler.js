@@ -1,6 +1,7 @@
-const workItemsCard = require("./adaptiveCards/workItemsCommand.json");
+const testCard = require("./adaptiveCards/workItemsCommand.json");
 const { AdaptiveCards } = require("@microsoft/adaptivecards-tools");
 const { CardFactory, MessageFactory } = require("botbuilder");
+const workItemsFactory = require("./workItemsFactory")
 
 class WorkItemsCommandHandler {
   triggerPatterns = "myWorkItems";
@@ -11,13 +12,11 @@ class WorkItemsCommandHandler {
 
     // do something to process your command and return message activity as the response
 
-    // render your adaptive card for reply message
-    const cardData = {
-      title: "Your Hello World App is Running",
-      body: "Congratulations! Your Hello World App is running. Open the documentation below to learn more about how to build applications with the Teams Toolkit.",
-    };
+    let cardJson = workItemsFactory.buildCard(0);
+    // console.log('Sending: ', JSON.stringify(cardJson));
 
-    const cardJson = AdaptiveCards.declare(workItemsCard).render(cardData);
+    //let cardData = {};
+    //const cardJson = AdaptiveCards.declare(testCard).render(cardData);
     return MessageFactory.attachment(CardFactory.adaptiveCard(cardJson));
   }
 }

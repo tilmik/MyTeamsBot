@@ -17,7 +17,10 @@ const commandApp = new ConversationBot({
   },
   command: {
     enabled: true,
-    commands: [new HelloWorldCommandHandler(), new WorkItemsCommandHandler()],
+    commands: [
+      new HelloWorldCommandHandler(),
+      new WorkItemsCommandHandler()
+    ],
   },
 });
 
