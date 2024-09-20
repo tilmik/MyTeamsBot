@@ -1,7 +1,7 @@
 const allData = require("./allData.json");
 const iconUrls = {
-    bug: "https://i.imgur.com/X4Xhz8s.png",
-    feature: "https://i.imgur.com/f13Oej7.png",
+    bug: "https://i.imgur.com/7slP7EU.png",
+    feature: "https://i.imgur.com/xbCJSEU.png",
     task: "https://i.imgur.com/rhCc0o8.png",
     userstory: "https://i.imgur.com/enMwd2b.png"
 };
