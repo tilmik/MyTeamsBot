@@ -1,0 +1,108 @@
+{
+    "type": "AdaptiveCard",
+    "body": [
+        {
+            "type": "Container",
+            "style": "emphasis",
+            "items": [
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                    {
+                        "type": "Column",
+                        "width": "auto",
+                        "verticalContentAlignment": "center",
+                        "items": [
+                            {
+                            "type": "Image",
+                            "url": "${iconUrl}",
+                            "height": "20px"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "Column",
+                        "width": "stretch",
+                        "items": [
+                            {
+                            "type": "RichTextBlock",
+                            "inlines": [
+                                {
+                                    "type": "TextRun",
+                                    "text": "${tracking_number}",
+                                    "color": "accent",
+                                    "size": "large",
+                                    "underline": true
+                                }
+                            ]
+                            }
+                        ]
+                    }
+                ]
+                },
+                {
+                "type": "TextBlock",
+                "text": "${title}",
+                "weight": "bolder",
+                "wrap": false,
+                "spacing": "None"
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "Assigned to: ${owner}",
+                    "wrap": false
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "Area path: ${area_path}",
+                    "spacing": "None"
+                },
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "width": "stretch",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Status: ${status}",
+                                    "size": "small",
+                                    "color":"accent"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Column",
+                            "width": "auto",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "${extraInfo}",
+                                    "size": "small",
+                                    "color": "attention"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "${description}",
+                    "wrap": true,
+                    "maxLines": 5,
+                    "isSubtle": true
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.Execute",
+            "title": "Back",
+            "verb": "back"
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5"
+}

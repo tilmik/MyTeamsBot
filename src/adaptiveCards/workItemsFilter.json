@@ -4,78 +4,81 @@
     "showGridLines": false,
     "verticalCellContentAlignment": "Center",
     "columns": [
-      {"width": 2},{"width": 1},{"width": 1},{"width": 1}
+        {"width": 2},
+        {"width": 1},
+        {"width": 1},
+        {"width": 1}
     ],
     "rows": [
-      {
-        "type": "TableRow",
-        "cells": [
-          {
-            "type": "TableCell",
-            "items": [
-              {
-                "type": "TextBlock",
-                "text": "Filter by type:",
-                "size": "Small"
-              }
+        {
+            "type": "TableRow",
+            "cells": [
+                {
+                    "type": "TableCell",
+                    "items": [
+                      {
+                          "type": "TextBlock",
+                          "text": "Filter by type:",
+                          "size": "Small"
+                      }
+                    ]
+                },
+                {
+                    "type": "TableCell",
+                    "style": "accent",
+                    "items": [
+                      {
+                          "type": "TextBlock",
+                          "text": "All",
+                          "horizontalAlignment": "Center",
+                          "size": "Small"
+                      }
+                    ],
+                    "selectAction": {
+                        "type": "Action.Execute",
+                        "verb": "filterByType",
+                        "data": {
+                            "selection": "all"
+                        }
+                    }
+                },
+                {
+                    "type": "TableCell",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Bugs",
+                            "horizontalAlignment": "Center",
+                            "size": "Small"
+                          }
+                      ],
+                    "selectAction": {
+                        "type": "Action.Execute",
+                        "verb": "filterByType",
+                        "data": {
+                            "selection": "bug"
+                        }
+                    }
+                },
+                {
+                    "type": "TableCell",
+                    "items": [
+                        {
+                          "type": "TextBlock",
+                          "text": "Features",
+                          "horizontalAlignment": "Center",
+                          "size": "Small"
+                        }
+                    ],
+                    "selectAction": {
+                        "type": "Action.Execute",
+                        "verb": "filterByType",
+                        "data": {
+                            "selection": "feature"
+                        }
+                    }
+                }
             ]
-          },
-          {
-            "type": "TableCell",
-            "style": "accent",
-            "items": [
-              {
-                "type": "TextBlock",
-                "text": "All",
-                "horizontalAlignment": "Center",
-                "size": "Small"
-              }
-            ],
-            "selectAction": {
-              "type": "Action.Execute",
-              "verb": "filterByType",
-              "data": {
-                "selection": "all"
-              }
-            }
-          },
-          {
-            "type": "TableCell",
-            "items": [
-              {
-                "type": "TextBlock",
-                "text": "Bugs",
-                "horizontalAlignment": "Center",
-                "size": "Small"
-              }
-            ],
-            "selectAction": {
-              "type": "Action.Execute",
-              "verb": "filterByType",
-              "data": {
-                "selection": "bug"
-              }
-            }
-          },
-          {
-            "type": "TableCell",
-            "items": [
-              {
-                "type": "TextBlock",
-                "text": "Features",
-                "horizontalAlignment": "Center",
-                "size": "Small"
-              }
-            ],
-            "selectAction": {
-              "type": "Action.Execute",
-              "verb": "filterByType",
-              "data": {
-                "selection": "feature"
-              }
-            }
-          }
-        ]
-      }
+        }
     ]
 }

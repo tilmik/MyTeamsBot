@@ -3,151 +3,243 @@
         "type": "bug",
         "tracking_number": 1056783,
         "title": "App Crashes on Launch After Recent Update",
+		"owner": "Adele Vance",
         "priority": 3,
-        "severity": 3
+        "severity": 3,
+        "description": "After the latest update, many users have reported that the app crashes immediately upon launching. This issue affects various devices and prevents users from accessing the platform. A solution is critical to restoring functionality and improving user trust. A fix will be prioritized to address the crash for all affected users.",
+        "area_path": "MSTeams\\Mobile Platform\\Fundamentals",
+        "state": "proposed"
     },
     {
         "type": "bug",
         "tracking_number": 1432768,
         "title": "Text Input Field Unresponsive on Certain Android Models",
+		"owner": "Alex Wilber",
         "priority": 1,
-        "severity": 2
+        "severity": 2,
+        "description": "Users with certain Android models have reported that the text input field becomes unresponsive during typing. This issue primarily affects communication and prevents users from sending messages or completing forms. A thorough investigation is required to resolve this bug across all impacted devices.",
+        "area_path": "MSTeams\\Mobile Platform\\Personal Apps",
+        "state": "active"
     },
     {
+        "type": "feature",
         "tracking_number": 1734362,
         "title": "Implement Dark Mode for Nighttime Users to Reduce Eye Strain",
+		"owner": "Diego Siciliani",
         "target_date": "2024-10-15",
-        "type": "feature"
+        "description": "Dark mode is being developed to improve usability for users who frequently access the app at night or in low-light environments. This feature will reduce eye strain and provide an alternative theme for more comfortable viewing. It is expected to increase user satisfaction and enhance the overall experience.",
+        "area_path": "MSTeams\\Mobile Platform\\Tabs",
+        "state": "rolling out"
     },
     {
         "type": "bug",
         "tracking_number": 1948276,
         "title": "Screen Flicker Issue When Scrolling Through Images",
+		"owner": "Grady Archie",
         "priority": 2,
-        "severity": 1
+        "severity": 1,
+        "description": "A screen flicker issue occurs when users scroll through image galleries, causing a disruptive viewing experience. This bug affects various devices and requires an immediate fix to prevent users from facing further issues during media navigation.",
+        "area_path": "MSTeams\\Mobile Platform\\Accessibility",
+        "state": "active"
     },
     {
+        "type": "feature",
         "tracking_number": 1894321,
         "title": "Optimize Database Query for Faster Load Times on High Traffic Days",
+		"owner": "Henrietta Mueller",
         "target_date": "2024-11-01",
-        "type": "feature"
+        "description": "This feature aims to optimize the platform’s database queries, significantly improving load times during high traffic periods. By reducing delays, the platform will handle more concurrent users, ensuring smooth operation during peak times like product launches and major events.",
+        "area_path": "MSTeams\\Mobile Platform\\Fundamentals",
+        "state": "proposed"
     },
     {
+        "type": "feature",
         "tracking_number": 1456789,
         "title": "Add Multi-Language Support for Global User Base Expansion",
+		"owner": "Isaiah Langer",
         "target_date": "2024-12-05",
-        "type": "feature"
+        "description": "Adding multi-language support will allow users from different regions to interact with the platform in their preferred language. This feature is critical for expanding into new markets and enhancing the user experience for non-English speakers.",
+        "area_path": "MSTeams\\Mobile Platform\\Meeting Apps",
+        "state": "proposed"
     },
     {
         "type": "bug",
         "tracking_number": 1786432,
         "title": "GPS Functionality Fails to Update Location on iPhone 12",
+		"owner": "Johanna Lorenz",
         "priority": 2,
-        "severity": 3
+        "severity": 3,
+        "description": "Users have reported that the GPS fails to update their current location on iPhone 12 devices. This issue affects location-based features such as map updates and delivery tracking. A timely fix is needed to restore GPS functionality.",
+        "area_path": "MSTeams\\Mobile Platform\\Device Capability",
+        "state": "active"
     },
     {
+        "type": "feature",
         "tracking_number": 1765432,
         "title": "Fix Login Page Redirection Issues to Improve User Onboarding",
+		"owner": "Joni Sherman",
         "target_date": "2024-09-30",
-        "type": "feature"
+        "description": "Login page redirection issues have been reported by new users, causing confusion during the onboarding process. This fix will ensure proper redirection after authentication, improving the overall onboarding experience for new users.",
+        "area_path": "MSTeams\\Mobile Platform\\Authentication",
+        "state": "rolling out"
     },
     {
         "type": "bug",
         "tracking_number": 1309875,
         "title": "App Fails to Load After Switching Between Wi-Fi and Mobile Data",
+		"owner": "Lee Gu",
         "priority": 1,
-        "severity": 1
+        "severity": 1,
+        "description": "When users switch between Wi-Fi and mobile data, the app occasionally fails to load. This bug significantly impacts user experience, especially for those who frequently switch networks while using the app.",
+        "area_path": "MSTeams\\Mobile Platform\\Tabs",
+        "state": "active"
     },
     {
+        "type": "feature",
         "tracking_number": 1987654,
         "title": "Redesign Home Page Layout for a More Intuitive User Experience",
+		"owner": "Lidia Holloway",
         "target_date": "2024-10-25",
-        "type": "feature"
+        "description": "The home page layout will be redesigned to make it more intuitive and user-friendly. The new design will streamline navigation and highlight key features, improving accessibility and engagement for all users.",
+        "area_path": "MSTeams\\Mobile Platform\\Personal Apps",
+        "state": "proposed"
     },
     {
         "type": "bug",
         "tracking_number": 1642538,
         "title": "In-App Purchases Not Reflecting in User Account",
+		"owner": "Lynne Robbins",
         "priority": 3,
-        "severity": 3
+        "severity": 3,
+        "description": "Some users are experiencing delays in their in-app purchases reflecting in their accounts. This issue impacts user satisfaction and revenue. A fix is required to ensure timely updates to the user’s account balance after a purchase.",
+        "area_path": "MSTeams\\Mobile Platform\\App Services",
+        "state": "active"
     },
     {
         "type": "bug",
         "tracking_number": 1523649,
         "title": "Background Music Continues to Play After App is Closed",
+		"owner": "Megan Bowen",
         "priority": 1,
-        "severity": 2
+        "severity": 2,
+        "description": "Background music continues to play even after the app is closed, leading to frustration for users. This bug disrupts the user experience and needs to be resolved to prevent unintended audio playback.",
+        "area_path": "MSTeams\\Mobile Platform\\Personal Apps",
+        "state": "active"
     },
     {
+        "type": "feature",
         "tracking_number": 1134567,
         "title": "Improve API Error Handling for Better Third-Party Integration",
+		"owner": "Miriam Graham",
         "target_date": "2024-11-10",
-        "type": "feature"
+        "description": "Improving API error handling will provide clearer error messages and better documentation for third-party developers. This enhancement is necessary to reduce integration issues and improve developer satisfaction.",
+        "area_path": "MSTeams\\Mobile Platform\\Fundamentals",
+        "state": "proposed"
     },
     {
+        "type": "feature",
         "tracking_number": 1767890,
         "title": "Upgrade Payment Gateway Integration to Enhance Security and Speed",
+		"owner": "Nestor Wilke",
         "target_date": "2024-12-01",
-        "type": "feature"
+        "description": "Upgrading the payment gateway will improve both transaction security and speed, making the checkout process smoother and more secure for users. This update is essential for maintaining trust and improving overall transaction success rates.",
+        "area_path": "MSTeams\\Mobile Platform\\Security",
+        "state": "proposed"
     },
     {
         "type": "bug",
         "tracking_number": 1987432,
         "title": "Crash Occurs When Selecting Multiple Photos for Upload",
+		"owner": "Patti Fernandez",
         "priority": 2,
-        "severity": 1
+        "severity": 1,
+        "description": "When users attempt to select multiple photos for upload, the app crashes. This bug affects file uploads and media sharing, making it a high-priority issue to address.",
+        "area_path": "MSTeams\\Mobile Platform\\Device Capability",
+        "state": "active"
     },
     {
         "type": "bug",
         "tracking_number": 1839274,
         "title": "Missing Icons on Home Screen After App Update",
+		"owner": "Pradeep Gupta",
         "priority": 1,
-        "severity": 2
+        "severity": 2,
+        "description": "After a recent app update, several users reported missing icons on the home screen. This affects navigation and usability, requiring an urgent fix to restore the icons and maintain a functional interface.",
+        "area_path": "MSTeams\\Mobile Platform\\Personal Apps",
+        "state": "active"
     },
     {
+        "type": "feature",
         "tracking_number": 1584321,
         "title": "Fix Search Functionality Bugs to Provide Accurate Search Results",
+		"owner": "Adele Vance",
         "target_date": "2024-09-25",
-        "type": "feature"
+        "description": "This feature focuses on fixing bugs in the search functionality to improve accuracy and relevance of search results. By optimizing the search algorithm, users will receive more accurate responses to their queries.",
+        "area_path": "MSTeams\\Mobile Platform\\App Discovery",
+        "state": "proposed"
     },
     {
         "type": "bug",
         "tracking_number": 1674893,
         "title": "Device Overheats When Using Augmented Reality Features",
+		"owner": "Diego Siciliani",
         "priority": 2,
-        "severity": 3
+        "severity": 3,
+        "description": "Users report that their devices overheat when using augmented reality features. This issue affects performance and can potentially damage the device, necessitating an immediate fix to optimize the AR features for lower heat generation.",
+        "area_path": "MSTeams\\Mobile Platform\\Performance",
+        "state": "active"
     },
     {
+        "type": "feature",
         "tracking_number": 1129876,
         "title": "Enhance Mobile Responsiveness for Seamless Cross-Device Experience",
+		"owner": "Henrietta Mueller",
         "target_date": "2024-10-20",
-        "type": "feature"
+        "description": "This feature will enhance the platform’s mobile responsiveness, ensuring a seamless experience across devices. Improvements include faster loading times and better adaptability to various screen sizes, improving usability for mobile users.",
+        "area_path": "MSTeams\\Mobile Platform\\User Experience",
+        "state": "proposed"
     },
     {
         "type": "bug",
         "tracking_number": 1387456,
         "title": "Text Message Notifications Delay on Android 13",
+		"owner": "Joni Sherman",
         "priority": 2,
-        "severity": 2
+        "severity": 2,
+        "description": "Android 13 users are experiencing delays in receiving text message notifications. This issue disrupts communication and needs to be resolved to ensure timely message delivery across devices.",
+        "area_path": "MSTeams\\Mobile Platform\\Notifications",
+        "state": "active"
     },
     {
         "type": "bug",
         "tracking_number": 1463829,
         "title": "Battery Drain Increased After Recent Update",
+		"owner": "Lidia Holloway",
         "priority": 2,
-        "severity": 3
+        "severity": 3,
+        "description": "Since the last update, users have noticed increased battery drain, especially during prolonged use. This bug significantly affects mobile users and requires an optimization to reduce battery consumption.",
+        "area_path": "MSTeams\\Mobile Platform\\Performance",
+        "state": "active"
     },
     {
+        "type": "feature",
         "tracking_number": 1945678,
         "title": "Integrate Push Notifications to Keep Users Informed in Real-Time",
+		"owner": "Megan Bowen",
         "target_date": "2024-11-15",
-        "type": "feature"
+        "description": "Push notifications will be integrated to provide real-time updates to users. This feature is crucial for keeping users informed of new messages, events, and other important app updates, enhancing engagement and interactivity.",
+        "area_path": "MSTeams\\Mobile Platform\\Personal Apps",
+        "state": "proposed"
     },
     {
         "type": "bug",
         "tracking_number": 1538927,
         "title": "Inconsistent Font Rendering on Different Screen Resolutions",
+		"owner": "Nestor Wilke",
         "priority": 3,
-        "severity": 3
+        "severity": 3,
+        "description": "Font rendering issues have been observed on devices with varying screen resolutions, leading to an inconsistent user interface. This problem affects readability and visual appeal, requiring a fix to standardize the font rendering across all devices.",
+        "area_path": "MSTeams\\Mobile Platform\\Accessibility",
+        "state": "active"
     }
 ]
