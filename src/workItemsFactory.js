@@ -1,11 +1,14 @@
 const workItemsCard = require("./adaptiveCards/workItemsOutline.json");
 const actionData = require("./adaptiveCards/workItemsActions.json");
 const filterData = require("./adaptiveCards/workItemsFilter.json");
+const workItemDetails = require("./adaptiveCards/workItemDetails.json");
+const { AdaptiveCards } = require("@microsoft/adaptivecards-tools");
 const { StatusCodes } = require('botbuilder');
 const dataService = require('./dataService');
 const pageSize = 3;
 
 let filterByType = "all";
+let currentPage = 0;
 
 const invokeResponse = (card) => {
     const cardRes = {
@@ -21,6 +24,7 @@ const invokeResponse = (card) => {
 };
 
 const buildCard = (page) => {
+    currentPage = page;
     let cardJson = JSON.parse(JSON.stringify(workItemsCard));
     cardJson.body.push(filterSegment());
     let cardData = dataService.getData(page, pageSize);
@@ -29,6 +33,26 @@ const buildCard = (page) => {
     cardJson.body.push(actionSegment(page));
     return cardJson;
 }
+
+const buildDetailsCard = (index) => {
+    const rawData = dataService.getDetails(index);
+    let cardData = {
+        title: rawData.title,
+        tracking_number: rawData.tracking_number,
+        owner: rawData.owner,
+        area_path: rawData.area_path,
+        description: rawData.description,
+        state: rawData.state,
+    };
+    if (rawData.type == "bug") {
+        cardData.extraInfo = "Priority: " + rawData.priority + " &nbsp;&nbsp;  Severity: " + rawData.severity;
+    } else if (rawData.type == "feature") {
+        cardData.extraInfo = "Target date: " + rawData.target_date;
+    }
+    cardData.iconUrl = dataService.getIconUrl(rawData.type);
+
+    return AdaptiveCards.declare(workItemDetails).render(cardData);
+};
 
 const applyFilter = (itemType) => {
     filterByType = itemType;
@@ -39,6 +63,7 @@ const dataToCardArray = (data) => {
     let result = [];
     for (var i = 0; i < data.length; i++) {
         let obj = {};
+        let itemIndex = currentPage * pageSize + i;
         obj.type = "Container";
         obj.style = "emphasis";
         obj.spacing = "small";
@@ -60,7 +85,7 @@ const dataToCardArray = (data) => {
                 },
                 {
                     type: "Column",
-                    width: "stretch",
+                    width: "auto",
                     items: [
                         {
                             type: "RichTextBlock",
@@ -73,7 +98,14 @@ const dataToCardArray = (data) => {
                                 }
                             ]
                         }
-                    ]
+                    ],
+                    selectAction: {
+                        type: "Action.Execute",
+                        verb: "showDetails",
+                        data: {
+                            index: itemIndex
+                        }
+                    }
                 }
             ],
         });
@@ -135,5 +167,7 @@ const actionSegment = (page) => {
 module.exports = {
     invokeResponse,
     applyFilter,
-    buildCard
+    buildCard,
+    buildDetailsCard,
+    backToList: () => buildCard(currentPage)
 };

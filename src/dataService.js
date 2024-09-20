@@ -35,6 +35,10 @@ const getData = (page, pageSize) => {
     return filteredData.slice(startIndex, endIndex);
 };
 
+const getDetails = (index) => {
+    return filteredData[index];
+};
+
 const getIconUrl = (itemType) => {
     return iconUrls[itemType];
 };
@@ -43,5 +47,6 @@ module.exports = {
     applyFilter,
     getTotalPages,
     getData,
+    getDetails,
     getIconUrl
 };

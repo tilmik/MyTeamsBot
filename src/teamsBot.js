@@ -30,6 +30,14 @@ class TeamsBot extends TeamsActivityHandler {
                 let cardJson = workItemsFactory.buildCard(0);
                 return workItemsFactory.invokeResponse(cardJson);
             }
+            else if (action.verb == "showDetails"){
+                const index = action.data.index;
+                let cardJson = workItemsFactory.buildDetailsCard(index);
+                return workItemsFactory.invokeResponse(cardJson);
+            }else if (action.verb == "backToList") {
+                let cardJson = workItemsFactory.backToList();
+                return workItemsFactory.invokeResponse(cardJson);
+            }
         }
     }
 }

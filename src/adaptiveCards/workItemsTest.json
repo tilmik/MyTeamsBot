@@ -71,58 +71,58 @@
             ]
         },
         {
-          "type": "Container",
-          "style": "emphasis",
-          "spacing": "small",
-          "items": [
-              {
-                "type": "ColumnSet",
-                "columns": [
-                    {
-                        "type": "Column",
-                        "width": "auto",
-                        "verticalContentAlignment": "center",
-                        "items": [
-                          {
-                            "type": "Image",
-                            "url": "https://i.imgur.com/X4Xhz8s.png",
-                            "height": "16px"
-                          }
-                        ]
-                    },
-                    {
-                        "type": "Column",
-                        "width": "stretch",
-                        "items": [
-                          {
-                            "type": "RichTextBlock",
-                            "inlines": [
-                                {
-                                    "type": "TextRun",
-                                    "text": "1056783",
-                                    "color": "accent",
-                                    "underline": true
-                                }
+            "type": "Container",
+            "style": "emphasis",
+            "spacing": "small",
+            "items": [
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "width": "auto",
+                            "verticalContentAlignment": "center",
+                            "items": [
+                            {
+                                "type": "Image",
+                                "url": "https://i.imgur.com/X4Xhz8s.png",
+                                "height": "16px"
+                            }
                             ]
-                          }
-                        ]
-                    }
-                ]
-              },
-              {
-              "type": "TextBlock",
-              "text": "App Crashes on Launch After Recent Update",
-              "weight": "bolder",
-              "wrap": false,
-              "spacing": "None"
-              },
-              {
-              "type": "TextBlock",
-              "text": "Priority: 3 &nbsp;&nbsp; Severity: 3",
-              "size": "small",
-              "spacing": "None"
-              }
-          ]
+                        },
+                        {
+                            "type": "Column",
+                            "width": "stretch",
+                            "items": [
+                            {
+                                "type": "RichTextBlock",
+                                "inlines": [
+                                    {
+                                        "type": "TextRun",
+                                        "text": "1056783",
+                                        "color": "accent",
+                                        "underline": true
+                                    }
+                                ]
+                            }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "App Crashes on Launch After Recent Update",
+                    "weight": "bolder",
+                    "wrap": false,
+                    "spacing": "None"
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "Priority: 3 &nbsp;&nbsp; Severity: 3",
+                    "size": "small",
+                    "spacing": "None"
+                }
+            ]
         },
         {
             "type": "ColumnSet",
