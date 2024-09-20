@@ -1,8 +1,11 @@
 const workItemsCard = require("./adaptiveCards/workItemsOutline.json");
 const actionData = require("./adaptiveCards/workItemsActions.json");
+const filterData = require("./adaptiveCards/workItemsFilter.json");
 const { StatusCodes } = require('botbuilder');
 const dataService = require('./dataService');
 const pageSize = 3;
+
+let filterByType = "all";
 
 const invokeResponse = (card) => {
     const cardRes = {
@@ -19,11 +22,17 @@ const invokeResponse = (card) => {
 
 const buildCard = (page) => {
     let cardJson = JSON.parse(JSON.stringify(workItemsCard));
+    cardJson.body.push(filterSegment());
     let cardData = dataService.getData(page, pageSize);
     let cardDataArray = dataToCardArray(cardData);
     cardJson.body.push(...cardDataArray);
     cardJson.body.push(actionSegment(page));
     return cardJson;
+}
+
+const applyFilter = (itemType) => {
+    filterByType = itemType;
+    dataService.applyFilter(itemType, 0, 0);
 }
 
 const dataToCardArray = (data) => {
@@ -74,21 +83,41 @@ const dataToCardArray = (data) => {
             spacing: "none",
             wrap: false
         });
-        obj.items.push({
-            type: "TextBlock",
-            text: "Priority: " + data[i].priority + " &nbsp;&nbsp;  Severity: " + data[i].severity,
-            size: "small",
-            spacing: "none"
-        })
+        if (data[i].type == "bug") {
+            obj.items.push({
+                type: "TextBlock",
+                text: "Priority: " + data[i].priority + " &nbsp;&nbsp;  Severity: " + data[i].severity,
+                size: "small",
+                spacing: "none"
+            });
+        } else if (data[i].type == "feature") {
+            obj.items.push({
+                type: "TextBlock",
+                text: "Target date: " + data[i].target_date,
+                size: "small",
+                spacing: "none"
+            });
+        }
+
         result.push(obj);
     }
     return result;
 };
 
+const filterSegment = () => {
+    let result = JSON.parse(JSON.stringify(filterData));
+    let accentIndex = filterByType == "all"? 1
+        : filterByType == "bug" ? 2
+        : filterByType == "feature" ? 3
+        : 0;
+    for (var i = 1; i < 4; i++) {
+        if (i == accentIndex) result.rows[0].cells[i].style = "accent";
+        else result.rows[0].cells[i].style = "default";
+    }
+    return result;
+};
+
 const actionSegment = (page) => {
-    //dataLength = bugData.length;
-    //totalPages = Math.floor(dataLength / pageSize);
-    //if (dataLength % pageSize != 0) totalPages = totalPages + 1;
     let totalPages = dataService.getTotalPages(pageSize);
     let result = JSON.parse(JSON.stringify(actionData));
     
@@ -105,5 +134,6 @@ const actionSegment = (page) => {
 
 module.exports = {
     invokeResponse,
+    applyFilter,
     buildCard
 };

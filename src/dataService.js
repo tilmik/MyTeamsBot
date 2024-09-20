@@ -9,10 +9,10 @@ let totalPages = -1;
 let filteredData = allData;
 
 const applyFilter = (itemType, priority, severity) => {
-    filteredData = bugData.filter((item) => {
+    filteredData = allData.filter((item) => {
         if (itemType != "all" && item.type != itemType) return false;
-        if (priority >= 0 && item.priority != priority) return false;
-        if (severity >= 0 && item.severity != severity) return false;
+        if (priority > 0 && 'priority' in item && item.priority != priority) return false;
+        if (severity > 0 && 'severity' in item && item.severity != severity) return false;
         return true;
     });
     totalPages = -1;

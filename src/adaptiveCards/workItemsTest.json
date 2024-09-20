@@ -8,6 +8,66 @@
         "size": "Large"
       },
       {
+        "type": "Table",
+        "spacing": "None",
+        "showGridLines": false,
+        "verticalCellContentAlignment": "Center",
+        "columns": [
+          {"width": 2},{"width": 1},{"width": 1},{"width": 1}
+        ],
+        "rows": [
+          {
+            "type": "TableRow",
+            "cells": [
+              {
+                "type": "TableCell",
+                "items": [
+                  {
+                    "type": "TextBlock",
+                    "text": "Filter by type:",
+                    "size": "Small"
+                  }
+                ]
+              },
+              {
+                "type": "TableCell",
+                "style": "accent",
+                "items": [
+                  {
+                    "type": "TextBlock",
+                    "text": "All",
+                    "horizontalAlignment": "Center",
+                    "size": "Small"
+                  }
+                ]
+              },
+              {
+                "type": "TableCell",
+                "items": [
+                  {
+                    "type": "TextBlock",
+                    "text": "Bugs",
+                    "horizontalAlignment": "Center",
+                    "size": "Small"
+                  }
+                ]
+              },
+              {
+                "type": "TableCell",
+                "items": [
+                  {
+                    "type": "TextBlock",
+                    "text": "Features",
+                    "horizontalAlignment": "Center",
+                    "size": "Small"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
         "type": "Container",
         "style": "emphasis",
         "spacing": "small",
@@ -58,35 +118,6 @@
             "text": "Priority: 3 &nbsp;&nbsp; Severity: 3",
             "size": "small",
             "spacing": "None"
-            }
-        ]
-      },
-      {
-        "type": "Container",
-        "style": "emphasis",
-        "separator": false,
-        "items": [
-            {
-                "type": "RichTextBlock",
-                "inlines": [
-                    {
-                        "type": "TextRun",
-                        "text": "1056783",
-                        "color": "accent",
-                        "underline": true
-                    }
-                ]
-            },
-            {
-            "type": "TextBlock",
-            "text": "App Crashes on Launch After Recent Update",
-            "weight": "bolder",
-            "wrap": false
-            },
-            {
-            "type": "TextBlock",
-            "text": "Priority: 3 &nbsp;&nbsp; Severity: 3",
-            "size": "small"
             }
         ]
       },

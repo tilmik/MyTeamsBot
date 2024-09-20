@@ -24,10 +24,12 @@ class TeamsBot extends TeamsActivityHandler {
           let cardJson = workItemsFactory.buildCard(targetPage);
           return workItemsFactory.invokeResponse(cardJson);
         }
-
-        //return MessageFactory.attachment(CardFactory.adaptiveCard(cardJson));
-        //const responseCard = await adaptiveCards.selectResponseCard(context, user, allMembers);
-        //return adaptiveCards.invokeResponse(responseCard);
+        else if (action.verb == "filterByType"){
+          const itemType = action.data.selection;
+          workItemsFactory.applyFilter(itemType);
+          let cardJson = workItemsFactory.buildCard(0);
+          return workItemsFactory.invokeResponse(cardJson);
+        }
     }
   }
 }
