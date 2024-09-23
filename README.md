@@ -1,3 +1,11 @@
+# This is a demo of an work item bot
+In this demo, we showed a cleaner way how a bot can help users to navigate through their work item (ADO / Jira) list.
+The bot provides an interactive list via adaptive card where pagination and filtering (limited) is available.
+Individual items can be selected for update (Update part is not implemented in this demo) too.
+All the data used here are synthetic, this demo does not implement any interface to an actual work management system.
+
+The below part of this readme is as-is from the Teams toolkit command bot sample.
+
 # Overview of the Command bot template
 
 This template showcases an app that responds to chat commands by displaying UI using an Adaptive Card. This enables your users to type in simple messages in Teams and your application can provide an appropriate response based on the contents of the message.
